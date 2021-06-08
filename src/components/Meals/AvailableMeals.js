@@ -14,7 +14,7 @@ const DummyMeals=[
     {
       id: 'm2',
       name: 'Noodles',
-      description: 'A soucy noodles!',
+      description: 'A soucy noodles!!!',
       price: 16.5,
     },
     {
@@ -26,7 +26,7 @@ const DummyMeals=[
     {
       id: 'm4',
       name: 'Samosa',
-      description: 'Indian special',
+      description: 'delecious Indian snack',
       price: 18.99,
     },
   ];
