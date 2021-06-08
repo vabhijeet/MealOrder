@@ -26,7 +26,7 @@ const DummyMeals=[
     {
       id: 'm4',
       name: 'Samosa',
-      description: 'Thing of masala',
+      description: 'Indian special',
       price: 18.99,
     },
   ];
