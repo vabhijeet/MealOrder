@@ -8,7 +8,7 @@ const DummyMeals=[
     {
       id: 'm1',
       name: 'Sushi',
-      description: 'Finest fish and veggies',
+      description: 'Finest fish and veggies anime lover should try this',
       price: 22.99,
     },
     {
