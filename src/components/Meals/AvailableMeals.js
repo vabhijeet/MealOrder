@@ -9,26 +9,26 @@ const DummyMeals=[
       id: 'm1',
       name: 'Sushi',
       description: 'Finest fish and veggies anime lover should try this',
-      price: 22.99,
+      price: 3.7,
     },
     {
       id: 'm2',
       name: 'Noodles',
       description: 'A soucy noodles!!!',
       
-      price: 16.5,
+      price: 2.5,
     },
     {
       id: 'm3',
       name: 'Pizza',
       description: 'Italian, all ones favourite',
-      price: 12.99,
+      price: 4.2,
     },
     {
       id: 'm4',
       name: 'Samosa',
       description: 'delecious Indian snack',
-      price: 18.99,
+      price: 0.8,
     },
   ];
 
