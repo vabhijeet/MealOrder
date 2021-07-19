@@ -10,6 +10,14 @@
     margin: 0;
     padding: 0;
   }
+  .err {
+    color:red;
+    text-align:center;
+  }
+  .MealsLoding {
+    text-align: center;
+    color:white;
+  }
   
   @keyframes meals-appear {
     from {

@@ -1,4 +1,5 @@
-import { Fragment } from "react"
+import { Fragment } from "react";
+import React from 'react';
 import AvailableMeals from "./AvailableMeals"
 import MealsSummary from "./MealsSummary"
 

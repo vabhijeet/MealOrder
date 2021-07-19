@@ -1,28 +1,26 @@
-import { useState} from 'react';
-import Cart from './components/Cart/Cart';
-import Header from './components/Layout/Header';
-import Meals from './components/Meals/Meals';
-import CartProvider from './store/CartProvider';
+import React from "react"
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+
+import { AuthProvider } from "./contexts/AuthContext"
+import Main from "./Main"
+
+// import Chats from "./Chats"
+import Login from "./Login"
+
 function App() {
-
-  const [showCart,setCartShown]=useState(false);
-  const cartIsShown=()=>{
-    setCartShown(true);
-  };
-  const cartIsHidden=()=>{
-    setCartShown(false);
-  };
-
   return (
-    
-    <CartProvider>
-      {showCart && <Cart onUse={cartIsHidden}/>}
-      <Header onShowCart={cartIsShown}/>
-      <Meals/>
-    </CartProvider>
-      
-    
-  );
+    <div style={{ fontFamily: 'Avenir' }}>
+      <Router>
+        <AuthProvider>
+          <Switch>
+            <Route path="/home" component={Main} />
+            <Route path="/" component={Login} />
+          </Switch>
+        </AuthProvider>
+      </Router>
+    </div>
+  )
 }
 
-export default App;
+export default App

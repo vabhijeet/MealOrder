@@ -1,5 +1,6 @@
 import CartContex from "./cart-contex";
 import { useReducer } from 'react';
+import React from "react";
 
 const defaultCartState={
     items:[],
@@ -53,6 +54,10 @@ const cartReducer =(state,action)=>{
             totalAmount:updatedTotalAmount
         };
     }
+
+    if(action.type==='CLEAR'){
+        return defaultCartState;
+    }
     return defaultCartState;
 }
 
@@ -66,11 +71,16 @@ const CartProvider=(props)=>{
         dispatchCartAction({type:'REMOVE', id:id});
     };
 
+    const clearCartHandler=()=>{
+        dispatchCartAction({type:'CLEAR'});
+    }
+
     const cartContex={
         items:cartState.items,
         totalAmount:cartState.totalAmount,
         addItem:addItemToCartHandler,
-        removeItem:removeItemFronCartHandler
+        removeItem:removeItemFronCartHandler,
+        clearCart: clearCartHandler
     };
     return <CartContex.Provider value={cartContex}>
         {props.children}

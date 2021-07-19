@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext } from 'react';
 import CartContex from '../../../store/cart-contex';
 import classes from './MealItem.module.css';
