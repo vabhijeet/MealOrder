@@ -7,7 +7,7 @@ import firebase from 'firebase/app';
 const Login=()=>{
     return <div id="login-page">
         <div id="login-card">
-            <h2>Welocme to MyChat</h2>
+            <h2>Welocme to Foody Order</h2>
             <div 
             className="login-button google"
             onClick={()=>auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())}
