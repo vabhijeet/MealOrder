@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-
+import { useHistory } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 import Modal from '../UI/Modal';
 import CartItem from './CartItem';
 import classes from './Cart.module.css';
@@ -7,6 +8,10 @@ import CartContex from '../../store/cart-contex';
 import Checkout from './Checkout';
 
 const Cart = (props) => {
+  const { user } = useAuth();
+  const history = useHistory();
+
+
   const [isCheckout, setIsCheckout] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [didSubmit, setDidSubmit] = useState(false);
@@ -28,12 +33,18 @@ const Cart = (props) => {
   };
 
   const submitOrderHandler = async (userData) => {
+    
+    if (!user || user === null) {
+      history.push("/")
+      return ;
+    }
     setIsSubmitting(true);
     await fetch('https://foody-order-default-rtdb.asia-southeast1.firebasedatabase.app/orders.json', {
       method: 'POST',
       body: JSON.stringify({
         user: userData,
         orderedItems: cartCtx.items,
+        email: user.email,
       }),
     });
     setIsSubmitting(false);
