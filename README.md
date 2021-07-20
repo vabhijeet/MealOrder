@@ -1,9 +1,9 @@
-# MyChat Application
+# Foody Order Application
 
 
 
 ## Introduction
-Created a Chat webapp  using ReactJS, Chat Engine, socket.io and Firebase which uses FirebaseUI Auth for handling login requests of users, while their profile were created through API calls from Firebase to chatengine.io once they are logged in successfully.
+Developed a site using React and Firebase where the food items were fetched via GET http calls to client side while there orders by POST calls to the server end once they confirm it.
 
 ## Images
 ### Login Page
