@@ -1,5 +1,5 @@
 # Foody Order Application
-
+npm install
 
 
 ## Introduction
